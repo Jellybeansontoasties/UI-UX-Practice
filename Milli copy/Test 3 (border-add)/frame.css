@@ -1,0 +1,158 @@
+/* Top Frame Styling */
+.top-frame {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow: hidden;
+  background: #fb9e64;
+  border-bottom: 4px solid white;
+  z-index: 1000;
+}
+
+.top-infinite-text {
+  display: flex;
+  white-space: nowrap;
+  animation: topScrollText 50s linear infinite;
+  transform: translateX(0%); /* Adjust initial position here */
+  color: #2a3c58;
+}
+
+.top-infinite-text span {
+  font-size: 2rem;
+  padding-right: 1rem;
+  word-spacing: 10px;
+}
+
+@keyframes topScrollText {
+  from {
+    transform: translateX(2%); /* Match initial position here */
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Bottom Frame Styling */
+.bottom-frame {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow: hidden;
+  background: #fb9e64;
+  border-top: 4px solid white;
+  z-index: 800;
+}
+
+.bottom-infinite-text {
+  display: flex;
+  white-space: nowrap;
+  animation: bottomScrollText 50s linear infinite;
+  transform: translateX(100%); /* Adjust initial position here */
+  color: #2a3c58;
+}
+
+.bottom-infinite-text span {
+  font-size: 2rem;
+  padding-right: 1rem;
+}
+
+@keyframes bottomScrollText {
+  from {
+    transform: translateX(-100%); /* Match initial position here */
+  }
+  to {
+    transform: translateX(2%);
+  }
+}
+
+/* Left Frame Styling */
+.left-frame {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-left: 5px;
+  padding-right: 5px; /* Narrow width for the border */
+  height: 100%; /* Full height of the viewport */
+  overflow: hidden;
+  background: #fb9e64;
+  border-right: 4px solid white;
+  z-index: 900;
+}
+
+.left-infinite-text {
+  display: flex;
+  flex-direction: column; /* Ensure vertical stacking */
+  align-items: center; /* Center text horizontally within the narrow frame */
+  white-space: nowrap;
+  transform: translateY(100%); /* Start position for scrolling */
+  animation: leftScrollText 50s linear infinite;
+  transform: translateX(0%); /* Adjust initial position here */
+  color: #2a3c58;
+}
+
+.left-infinite-text span {
+  writing-mode: vertical-rl; /* Keep the vertical text flow */
+  text-orientation: mixed; /* Characters stay upright */
+  font-size: 2rem;
+  padding-bottom: 1rem; /* Space between repeating text */
+  word-spacing: 10px;
+  transform: rotate(180deg); /* Flip the text vertically */
+  display: inline-block; /* Ensure transform applies properly */
+}
+
+
+@keyframes leftScrollText {
+  from {
+    transform: translateY(-50%); /* Start at the bottom */
+  }
+  to {
+    transform: translateY(2%); /* Move to the top */
+  }
+}
+
+/* Right Frame Styling */
+.right-frame {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding-left: 5px;
+  padding-right: 5px; /* Narrow width for the border */
+  height: 100%; /* Full height of the viewport */
+  overflow: hidden;
+  background: #fb9e64;
+  border-left: 4px solid white;
+  z-index: 700;
+}
+
+.right-infinite-text {
+  display: flex;
+  flex-direction: column; /* Ensure vertical stacking */
+  align-items: center; /* Center text horizontally within the narrow frame */
+  white-space: nowrap;
+  transform: translateY(100%); /* Start position for scrolling */
+  animation: rightScrollText 50s linear infinite;
+  color: #2a3c58;
+}
+
+.right-infinite-text span {
+  writing-mode: vertical-lr; /* Rotate text for vertical layout */
+  text-orientation: mixed; /* Ensure characters remain upright */
+  font-size: 2rem;
+  padding-bottom: 1rem; /* Spacing between repeating text */
+  word-spacing: 10px;
+}
+
+@keyframes rightScrollText {
+  from {
+    transform: translateY(2%); /* Start at the bottom */
+  }
+  to {
+    transform: translateY(-50%); /* Move to the top */
+  }
+}

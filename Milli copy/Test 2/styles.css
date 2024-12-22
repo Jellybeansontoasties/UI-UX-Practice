@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    width: 100vw;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main-container {
+    position: relative;
+    height: 100%; /* Full screen height */
+    width: 100%; /* Full screen width */
+  }
+  
+  .section {
+    position: absolute;
+    border: 1px solid black;
+    transition: all 0.5s ease; /* Smooth transition for hover animations */
+  }
+  
+  .section .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 24px;
+  }
+  
+  /* Default dimensions for each section */
+  .work {
+    top: 0;
+    left: 0;
+    height: 40%;
+    width: 60%;
+  }
+  
+  .connect {
+    top: 0;
+    right: 0;
+    height: 60%;
+    width: 40%;
+  }
+  
+  .about {
+    bottom: 0;
+    left: 0;
+    height: 60%;
+    width: 40%;
+  }
+  
+  .community {
+    bottom: 0;
+    right: 0;
+    height: 40%;
+    width: 60%;
+  }
+  
+  .logo {
+    top: 50%;
+    left: 50%;
+    height: 20%;
+    width: 20%;
+    transform: translate(-50%, -50%);
+    background-color: yellow;
+    border: none;
+  }
+  
+
+.section:hover {
+  background-color: yellow;
+}

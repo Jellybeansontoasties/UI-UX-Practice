@@ -1,0 +1,198 @@
+    /* Dynamically update CSS variables */
+    --work-width: 40%;       /* Shrink WORK */
+    --work-height: 52.5%;
+    --contact-width: 20%;    /* Shrink CONTACT */
+    --contact-height: 47.5%;
+    --community-width: 80%;  /* Shrink COMMUNITY */
+    --community-height: 32.5%;
+    --logo-width: 25%;       /* Slightly expand LOGO */
+    --logo-height: 20%;
+}
+
+
+.work {
+    top: 0%;
+    left: 0%;
+    width: 60%;
+    height: 47.5%;
+    color: #D3F1DF;
+    /*background-color: #525B44;*/
+}
+
+.connect {
+    top: 0%;
+    right: 0%;
+    width: 40%;
+    height: 57.5%;
+    color: #85A98F;
+    /*background-color: #5A6C57;*/=
+}
+
+.contact {
+    bottom: 0%;
+    left: 0%;
+    width: 40%;
+    height: 57.5%;
+    color: #5A6C57;
+    /*background-color: #85A98F;*/
+}
+
+.community {
+    bottom: 0%;
+    right: 0%;
+    width: 60%;
+    height: 42.5%;
+    color: #525B44;
+    /*background-color: #D3F1DF;*/
+}
+
+.logo {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 15%;
+    /*background-color: white;*/
+    color: black;
+    border: 2px solid black;
+}
+
+
+——————
+
+
+/* Hover Effects to Reposition Elements */
+.connect:hover {
+    width: 50%;
+    height: 62.5%;
+    background-color: #ffcc00;
+}
+.connect:hover ~ .work {
+    top: 0%;
+    left: 0%;
+    width: 60%;
+    height: 47.5%;
+}
+
+.connect:hover ~ .contact {
+    bottom: 0%;
+    left: 0%;
+    width: 40%;
+    height: 57.5%;
+}
+
+.connect:hover ~ .community {
+    bottom: 0%;
+    right: 0%;
+    width: 60%;
+    height: 42.5%;
+}
+
+.connect:hover ~ .logo {
+    top: 50%;
+    left: 50%;
+    width: 20%;
+    height: 15%;
+}
+
+:root {
+    --work-width: 60%;
+    --work-height: 47.5%;
+    --contact-width: 40%;
+    --contact-height: 57.5%;
+    --community-width: 60%;
+    --community-height: 42.5%;
+    --logo-width: 20%;
+    --logo-height: 15%;
+}
+
+
+body:hover .connect {
+    width: 60%;
+    height: 67.5%;
+    background-color: #ffcc00;
+    z-index: 10;
+}
+
+body:hover {
+    --work-width: 40%;
+    --work-height: 52.5%;
+    --contact-width: 20%;
+    --contact-height: 47.5%;
+    --community-width: 80%;
+    --community-height: 32.5%;
+    --logo-top: 60%; /* New variable for logo's top position */
+    --logo-left: 30%;
+
+}
+
+
+:root {
+    --work-width: 60%;
+    --work-height: 47.5%;
+    --contact-width: 40%;
+    --contact-height: 57.5%;
+    --community-width: 60%;
+    --community-height: 42.5%;
+    --logo-width: 20%;
+    --logo-height: 15%;
+    --logo-top: 50%;
+    --logo-left: 50%;
+    --connect-width: 40%;
+    --connect-height: 57.5%;
+}
+
+
+/* Hover Effects */
+.container:hover {
+    --work-width: 40%;
+    --work-height: 52.5%;
+    --contact-width: 20%;
+    --contact-height: 47.5%;
+    --community-width: 80%;
+    --community-height: 32.5%;
+    --logo-top: 60%;
+    --logo-left: 30%;
+}
+
+/* Individual Hover States */
+.container > div:hover {
+    background-color: #ffcc00;
+    z-index: 10;
+}
+
+.container > div.connect:hover {
+
+    --connect-width: 60%;
+    --connect-height: 67.5%;
+    --work-width: 40%;
+    --work-height: 52.5%;
+    --contact-width: 20%;
+    --contact-height: 47.5%;
+    --community-width: 80%;
+    --community-height: 32.5%;
+    --logo-top: 60%;
+    --logo-left: 30%;
+}
+
+.container > div.work:hover{
+    --work-width: 70%;
+    --work-height: 57.5%;
+    --connect-width: 30%;
+    --connect-height: 67.5%;
+    --contact-width: 50%;
+    --contact-height: 57.5%;
+    --community-width: 50%;
+    --community-height: 12.5%;
+    --logo-width: 20%;
+    --logo-height: 15%;
+    --logo-top: 60%;
+    --logo-left: 60%;
+}
+
+
+
+
+
+
+
